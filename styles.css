@@ -82,6 +82,53 @@ main {
   width: 100%;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-close {
+  display: none;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .logo {
   height: 44px;
   width: 44px;
@@ -197,6 +244,7 @@ main {
   width: 100%;
   max-width: 420px;
   height: 100vh;
+  height: 100dvh;
   background: var(--white);
   box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
   transform: translateX(100%);
@@ -355,6 +403,7 @@ main {
 
 .cart-footer {
   padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
   border-top: 2px solid #f0e6df;
   background: linear-gradient(135deg, #fdf9f6, #fff);
 }
@@ -1300,6 +1349,9 @@ main {
   .hero-ref__image {
     height: 420px;
   }
+  .hero-ref__copy h1 {
+    font-size: 64px;
+  }
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1365,7 +1417,47 @@ main {
     padding: 24px 16px;
   }
   .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 78%;
+    max-width: 300px;
+    background: var(--terracota);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+  }
+  .nav.active {
+    transform: translateX(0);
+  }
+  .nav-link {
+    font-size: 1.15rem;
+  }
+  .nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .menu-toggle {
+    display: flex;
   }
   .site-header {
     margin: 12px 12px 0;

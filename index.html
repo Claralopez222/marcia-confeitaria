@@ -31,7 +31,8 @@
   <header class="site-header">
     <div class="header-inner">
       <img src="assets/logo.jpg" alt="Márcia Confeitaria" class="logo">
-      <nav class="nav">
+      <nav class="nav" id="mainNav">
+        <button class="nav-close" id="navClose" aria-label="Fechar menu">&times;</button>
         <a href="#bolos" class="nav-link">Bolos</a>
         <a href="#doces-finos" class="nav-link">Doces</a>
         <a href="#salgados" class="nav-link">Salgados</a>
@@ -39,12 +40,18 @@
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#contato" class="nav-link">Contato</a>
       </nav>
-      <button class="cart-button" id="cartButton">
-        <span class="cart-icon">🛒</span>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
+      <div class="header-actions">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="cart-button" id="cartButton">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
     </div>
   </header>
+  <div class="nav-overlay" id="navOverlay"></div>
 
   <main>
     <section class="hero hero-ref">

@@ -117,6 +117,31 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('cartButton').addEventListener('click', toggleCart);
   document.getElementById('cartClose').addEventListener('click', closeCart);
   document.getElementById('cartOverlay').addEventListener('click', closeCart);
+
+  // Menu mobile
+  const mainNav = document.getElementById('mainNav');
+  const menuToggle = document.getElementById('menuToggle');
+  const navClose = document.getElementById('navClose');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function openMenu() {
+    mainNav.classList.add('active');
+    navOverlay.classList.add('active');
+    menuToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    mainNav.classList.remove('active');
+    navOverlay.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  menuToggle.addEventListener('click', openMenu);
+  navClose.addEventListener('click', closeMenu);
+  navOverlay.addEventListener('click', closeMenu);
+  mainNav.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 });
 
 function toggleCart() {
