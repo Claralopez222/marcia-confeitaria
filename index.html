@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Márcia Confeitaria</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Carrinho Lateral -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>Seu Carrinho</h2>
+      <button class="cart-close" id="cartClose">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Seu carrinho está vazio</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">R$ 0,00</span>
+      </div>
+      <a href="https://wa.me/message/W4JF637ON4FRA1" class="cart-checkout">Finalizar no WhatsApp</a>
+    </div>
+  </aside>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="assets/logo.jpg" alt="Márcia Confeitaria" class="logo">
+      <nav class="nav">
+        <a href="#bolos" class="nav-link">Bolos</a>
+        <a href="#doces-finos" class="nav-link">Doces</a>
+        <a href="#salgados" class="nav-link">Salgados</a>
+        <a href="#sobremesas" class="nav-link">Sobremesas</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+      <button class="cart-button" id="cartButton">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-ref">
+      <div class="hero-ref__top">
+        <div class="hero-ref__brand-circle">
+          <img src="assets/logo.jpg" alt="Márcia Confeitaria" class="hero-ref__brand-logo">
+        </div>
+        <nav class="hero-ref__nav">
+          <a href="#bolos" class="hero-nav-link">Bolos</a>
+          <a href="#doces-finos" class="hero-nav-link">Doces</a>
+          <a href="#salgados" class="hero-nav-link">Salgados</a>
+          <a class="hero-ref__shop-btn" href="#sobremesas">FAÇA SEU PEDIDO</a>
+        </nav>
+      </div>
+
+      <div class="hero-ref__body">
+        <div class="hero-ref__copy">
+          <h1>Confeitaria Artesanal</h1>
+          <p class="hero-subtitle">Produtos deliciosos feitos com carinho</p>
+          <a class="hero-ref__button" href="#doces-finos">EXPLORAR PRODUTOS</a>
+        </div>
+        <div class="hero-ref__image placeholder">Imagem reservada</div>
+      </div>
+    </section>
+
+    <section id="bolos" class="cards">
+      <h2>Bolos</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/bolo-brigadeiro.png" alt="Bolo de brigadeiro com granulado" loading="lazy">
+          </div>
+          <h3>Bolo de Brigadeiro</h3>
+          <p>Massa fofinha com cobertura e granulado de brigadeiro cremoso.</p>
+          <div class="card-price">R$ 45,00</div>
+          <button class="card-button add-to-cart" data-product="Bolo de Brigadeiro" data-price="45">
+            <span class="button-text">Adicionar ao Carrinho</span>
+            <span class="button-icon">+</span>
+          </button>
+        </article>
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/bolo-4-leites.jpg" alt="Bolo 4 leites" loading="lazy">
+          </div>
+          <h3>Bolo 4 Leites</h3>
+          <p>Receita cremosa e encharcada, um clássico irresistível.</p>
+          <div class="card-price">R$ 50,00</div>
+          <button class="card-button add-to-cart" data-product="Bolo 4 Leites" data-price="50">
+            <span class="button-text">Adicionar ao Carrinho</span>
+            <span class="button-icon">+</span>
+          </button>
+        </article>
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/bolo-morango-suspiro.jpg" alt="Bolo de morango com suspiro" loading="lazy">
+          </div>
+          <h3>Bolo Morango com Suspiro</h3>
+          <p>Chantininho, morangos frescos e suspiro crocante por cima.</p>
+          <div class="card-price">R$ 55,00</div>
+          <button class="card-button add-to-cart" data-product="Bolo Morango com Suspiro" data-price="55">
+            <span class="button-text">Adicionar ao Carrinho</span>
+            <span class="button-icon">+</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="doces-finos" class="categories">
+      <div class="categories-header">
+        <p class="categories-label">NOSSAS CATEGORIAS</p>
+        <h2>Doces Finos</h2>
+      </div>
+      <div class="categories-grid">
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-dois-amores.jpg" alt="Dois Amores" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Dois Amores" data-price="15">Adicionar</button>
+          </div>
+          <h3>Dois Amores</h3>
+          <p class="product-count">6 Produtinhos</p>
+          <div class="category-price">R$ 15,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-nozes.jpg" alt="Nozes" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Nozes" data-price="12">Adicionar</button>
+          </div>
+          <h3>Nozes</h3>
+          <p class="product-count">4 Produtinhos</p>
+          <div class="category-price">R$ 12,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-damasco.jpg" alt="Damasco" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Damasco" data-price="14">Adicionar</button>
+          </div>
+          <h3>Damasco</h3>
+          <p class="product-count">5 Produtinhos</p>
+          <div class="category-price">R$ 14,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-belga.jpg" alt="Belga" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Belga" data-price="18">Adicionar</button>
+          </div>
+          <h3>Belga</h3>
+          <p class="product-count">3 Produtinhos</p>
+          <div class="category-price">R$ 18,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-cereja.jpg" alt="Cereja" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Cereja" data-price="16">Adicionar</button>
+          </div>
+          <h3>Cereja</h3>
+          <p class="product-count">5 Produtinhos</p>
+          <div class="category-price">R$ 16,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-uva.png" alt="Uva" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Uva" data-price="13">Adicionar</button>
+          </div>
+          <h3>Uva</h3>
+          <p class="product-count">4 Produtinhos</p>
+          <div class="category-price">R$ 13,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-olho-de-sogra.jpg" alt="Olho de Sogra" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Olho de Sogra" data-price="12">Adicionar</button>
+          </div>
+          <h3>Olho de Sogra</h3>
+          <p class="product-count">5 Produtinhos</p>
+          <div class="category-price">R$ 12,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/docinho-churros.jpg" alt="Churros" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Churros" data-price="20">Adicionar</button>
+          </div>
+          <h3>Churros</h3>
+          <p class="product-count">8 Produtinhos</p>
+          <div class="category-price">R$ 20,00</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="salgados" class="categories">
+      <div class="categories-header">
+        <p class="categories-label">NOSSAS CATEGORIAS</p>
+        <h2>Salgados</h2>
+      </div>
+      <div class="categories-grid">
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-mini-pizza.jpg" alt="Mini Pizza" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Mini Pizza" data-price="18">Adicionar</button>
+          </div>
+          <h3>Mini Pizza</h3>
+          <p class="product-count">4 Produtinhos</p>
+          <div class="category-price">R$ 18,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-bendito-panini.jpg" alt="Bendito Panini" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Bendito Panini" data-price="22">Adicionar</button>
+          </div>
+          <h3>Bendito Panini</h3>
+          <p class="product-count">6 Produtinhos</p>
+          <div class="category-price">R$ 22,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-folhados-camarao.jpg" alt="Folhados de Camarão" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Folhados de Camarão" data-price="16">Adicionar</button>
+          </div>
+          <h3>Folhados de Camarão</h3>
+          <p class="product-count">5 Produtinhos</p>
+          <div class="category-price">R$ 16,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-quiche-lorraine.jpg" alt="Quiche Lorraine" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Quiche Lorraine" data-price="20">Adicionar</button>
+          </div>
+          <h3>Quiche Lorraine</h3>
+          <p class="product-count">3 Produtinhos</p>
+          <div class="category-price">R$ 20,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-quiche-carne-seca.jpg" alt="Quiche de Carne Seca" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Quiche de Carne Seca" data-price="20">Adicionar</button>
+          </div>
+          <h3>Quiche Carne Seca</h3>
+          <p class="product-count">3 Produtinhos</p>
+          <div class="category-price">R$ 20,00</div>
+        </article>
+        <article class="category-item">
+  <div class="category-image">
+    <img src="assets/salgado-empadao-frango.jpg" alt="Empadão de Frango" loading="lazy">
+  </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Empadão de Frango" data-price="15">Adicionar</button>
+          </div>
+          <h3>Empadão de Frango</h3>
+          <p class="product-count">6 Produtinhos</p>
+          <div class="category-price">R$ 15,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-mini-hamburguer.jpg" alt="Mini Hambúrguer" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Mini Hambúrguer" data-price="18">Adicionar</button>
+          </div>
+          <h3>Mini Hambúrguer</h3>
+          <p class="product-count">4 Produtinhos</p>
+          <div class="category-price">R$ 18,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/salgado-kit-mini-salgadinhos.jpg" alt="Kit Mini Salgadinhos" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Kit Mini Salgadinhos" data-price="35">Adicionar</button>
+          </div>
+          <h3>Kit Mini Salgadinhos</h3>
+          <p class="product-count">Variados</p>
+          <div class="category-price">R$ 35,00</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobremesas" class="categories">
+      <div class="categories-header">
+        <p class="categories-label">NOSSAS CATEGORIAS</p>
+        <h2>Sobremesas</h2>
+      </div>
+      <div class="categories-grid">
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/sobremesa-taca-morango-chocolate.jpg" alt="Taça de Morango com Chocolate" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Taça de Morango com Chocolate" data-price="16">Adicionar</button>
+          </div>
+          <h3>Taça de Morango com Chocolate</h3>
+          <p class="product-count">Individual</p>
+          <div class="category-price">R$ 16,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/sobremesa-taca-leite-ninho-morango.jpg" alt="Taça de Leite Ninho com Morango" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Taça de Leite Ninho com Morango" data-price="16">Adicionar</button>
+          </div>
+          <h3>Taça de Leite Ninho com Morango</h3>
+          <p class="product-count">Individual</p>
+          <div class="category-price">R$ 16,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/sobremesa-gelada-morango-coco.jpg" alt="Sobremesa Gelada de Morango com Coco" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Sobremesa Gelada de Morango com Coco" data-price="45">Adicionar</button>
+          </div>
+          <h3>Gelada de Morango com Coco</h3>
+          <p class="product-count">Fatia ou inteira</p>
+          <div class="category-price">R$ 45,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/sobremesa-bombom-travessa.jpg" alt="Bombom de Travessa" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Bombom de Travessa" data-price="45">Adicionar</button>
+          </div>
+          <h3>Bombom de Travessa</h3>
+          <p class="product-count">Fatia ou inteira</p>
+          <div class="category-price">R$ 45,00</div>
+        </article>
+        <article class="category-item">
+          <div class="category-image">
+            <img src="assets/sobremesa-taca-banana-canela.jpg" alt="Taça de Banana com Canela" loading="lazy">
+          </div>
+          <div class="category-overlay">
+            <button class="category-button add-to-cart" data-product="Taça de Banana com Canela" data-price="16">Adicionar</button>
+          </div>
+          <h3>Taça de Banana com Canela</h3>
+          <p class="product-count">Individual</p>
+          <div class="category-price">R$ 16,00</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+      <div class="about-bg-flower" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><path d="M100 20c12 0 22 18 22 40 0-22 18-38 38-32-14 16-14 38 4 50-18-6-36 4-42 24-6-20-24-30-42-24 18-12 18-34 4-50 20-6 38 10 38 32 0-22 10-40 22-40-12 0-22-18-22-40 0 22-18 38-38 32 14-16 14-38-4-50 18 6 36-4 42-24 6 20 24 30 42 24-18 12-18 34-4 50-20 6-38-10-38-32" fill="var(--terracota)"/></svg>
+      </div>
+      <div class="about-container">
+        <div class="about-content">
+          <span class="about-label">NOSSA HISTÓRIA</span>
+          <h2>Sobre Márcia Confeitaria</h2>
+          <p class="about-text">Márcia Confeitaria é uma confeitaria artesanal que combina tradição e sofisticação. Cada produto é feito com cuidado, dedicação e ingredientes de qualidade, pensado para ocasiões especiais e para tornar seu dia a dia mais doce.</p>
+          <blockquote class="about-quote">
+            <span class="about-quote-mark">“</span>
+            Feito à mão, com o mesmo carinho de sempre.
+          </blockquote>
+          <div class="about-highlights">
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c1 3 3 5 6 6-3 1-5 3-6 6-1-3-3-5-6-6 3-1 5-3 6-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Artesanal</h3>
+              <p>Receitas tradicionais e técnicas aprimoradas</p>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 4l2.2 4.6L19 9.3l-3.5 3.4.8 4.9L12 15.4l-4.3 2.2.8-4.9L5 9.3l4.8-.7L12 4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Premium</h3>
+              <p>Ingredientes selecionados com cuidado</p>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 11l2-6h12l2 6M4 11h16M4 11v7a1 1 0 001 1h1a1 1 0 001-1v-1h10v1a1 1 0 001 1h1a1 1 0 001-1v-7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Entrega</h3>
+              <p>Fresco, conforme feito por Márcia</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-ring about-ring--outer">
+            <div class="about-ring about-ring--inner">
+              <div class="about-placeholder">
+                <img src="assets/logo.jpg" alt="Márcia Confeitaria" class="about-logo">
+              </div>
+            </div>
+          </div>
+          <div class="about-dot about-dot--1"></div>
+          <div class="about-dot about-dot--2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <div class="contact-bg-flower" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><path d="M100 20c12 0 22 18 22 40 0-22 18-38 38-32-14 16-14 38 4 50-18-6-36 4-42 24-6-20-24-30-42-24 18-12 18-34 4-50 20-6 38 10 38 32 0-22 10-40 22-40-12 0-22-18-22-40 0 22-18 38-38 32 14-16 14-38-4-50 18 6 36-4 42-24 6 20 24 30 42 24-18 12-18 34-4 50-20 6-38-10-38-32" fill="var(--turquesa)"/></svg>
+      </div>
+      <div class="contact-container">
+        <span class="contact-label">FALE CONOSCO</span>
+        <h2>Entre em Contato</h2>
+        <p class="contact-intro">Gostou dos produtos? Fale conosco pelo WhatsApp ou nos acompanhe no Instagram para saber mais!</p>
+
+        <div class="contact-info-row">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>Horário</h4>
+              <p>Seg a Sáb · 9h às 18h</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.5A7 7 0 105 9.5C5 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div>
+              <h4>Localização</h4>
+              <p><a href="https://www.google.com/maps/search/?api=1&query=R.+S%C3%ADrio+Libaneza+213+Bairro+Popular+Cuiab%C3%A1+MT" target="_blank" rel="noreferrer" class="contact-address-link">R. Sírio Libaneza, 213 — Bairro Popular, Cuiabá - MT</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-channels">
+          <a href="https://wa.me/message/W4JF637ON4FRA1" class="contact-card whatsapp-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 1.8a8.2 8.2 0 014.2 15.2l-.3.2.6 2.3-2.4-.6-.3.2A8.2 8.2 0 1112 3.8zm-3.4 4.5c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 4 2.2 1 2.7.8 3.1.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.1-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4z"/></svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Faça seu pedido direto conosco</p>
+            <span class="contact-link">+55 65 3321-3020</span>
+          </a>
+          <a href="https://www.instagram.com/marcia_confeitaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" class="contact-card instagram-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+            </div>
+            <h3>Instagram</h3>
+            <p>Veja nossos produtos e destaques</p>
+            <span class="contact-link">@marcia_confeitaria</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© Márcia Confeitaria — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
